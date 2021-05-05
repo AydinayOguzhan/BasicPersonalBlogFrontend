@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Blog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a routerLink="" class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+  
+          <li class="nav-item">
+            <a routerLink="/blog" class="nav-link" href="#" tabindex="-1" aria-disabled="true">Blog</a>  
+          </li>
+        </ul>
+         <ul class="navbar-nav ml-auto mx-5">
+          <li *ngIf="logged === false" class="nav-item">
+            <a routerLink="login" class="nav-link text-primary">Login</a>
+          </li>
+          <li *ngIf="logged === false" class="nav-item">
+            <a routerLink="register" class="nav-link text-primary">Sign up</a>
+          </li>
+  
+          <!-- <li *ngIf="logged === true" class="nav-item dropdown mx-end">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              {{user?.firstName}} {{user?.lastName}}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="user/{{user?.id}}">Change user informations</a></li>
+              <li><a class="dropdown-item" routerLink="customer/update/{{user?.id}}">Change customer informations</a></li>
+            </ul>
+          </li>
+          
+          <li *ngIf="logged === true" class="nav-item">
+            <a (click)="logout()" href="" class="nav-link text-primary">Logout</a>
+          </li>
+  
+          <li *ngIf="ifAdmin === true" class="nav-item dropdown mx-end">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Admin
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="admin/view/car">Car</a></li>
+              <li><a class="dropdown-item" routerLink="admin/view/brand">Brand</a></li>
+              <li><a class="dropdown-item" routerLink="admin/view/color">Color</a></li>
+              <li><a class="dropdown-item" routerLink="admin/rentals">Rentals</a></li>
+              <li><a class="dropdown-item" routerLink="admin/customers">Customers</a></li>
+              <li><a class="dropdown-item" routerLink="admin/users">Users</a></li>
+            </ul>
+          </li> -->
+        </ul> 
+      </div>
+    </div>
+  </nav>
