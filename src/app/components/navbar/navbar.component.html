@@ -29,7 +29,7 @@
               {{user?.firstName}} {{user?.lastName}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" routerLink="user/{{user?.id}}">Change user informations</a></li>
+              <li><a class="dropdown-item" routerLink="/">Change user informations</a></li>
             </ul>
           </li>
           
@@ -37,20 +37,16 @@
             <a (click)="logout()" href="" class="nav-link text-primary">Logout</a>
           </li>
   
-          <!--<li *ngIf="ifAdmin === true" class="nav-item dropdown mx-end">
+          <li *ngIf="ifAdmin === true" class="nav-item dropdown mx-end">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Admin
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" routerLink="admin/view/car">Car</a></li>
-              <li><a class="dropdown-item" routerLink="admin/view/brand">Brand</a></li>
-              <li><a class="dropdown-item" routerLink="admin/view/color">Color</a></li>
-              <li><a class="dropdown-item" routerLink="admin/rentals">Rentals</a></li>
-              <li><a class="dropdown-item" routerLink="admin/customers">Customers</a></li>
+              <li><a class="dropdown-item" routerLink="/">Posts</a></li>
               <li><a class="dropdown-item" routerLink="admin/users">Users</a></li>
             </ul>
-          </li> -->
+          </li>
         </ul> 
       </div>
     </div>
