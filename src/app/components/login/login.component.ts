@@ -34,8 +34,8 @@ export class LoginComponent implements OnInit {
       this.authService.login(user).subscribe(response=>{
         this.localStorageService.setVariable("token",response.data.token)
         this.localStorageService.setVariable("email",user.email)
+        this.toastr.success(response.message)
         this.getUserByEmail(user.email)
-        
       },errorResponse=>{
         this.toastr.error(errorResponse.error.message)
       })
