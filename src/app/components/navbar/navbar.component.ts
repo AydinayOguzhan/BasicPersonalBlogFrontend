@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/services/authService/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,10 +10,16 @@ import { ToastrService } from 'ngx-toastr';
 export class NavbarComponent implements OnInit {
   logged:boolean = false
 
-  constructor() { }
+  constructor(private authService:AuthService) { }
 
   ngOnInit(): void {
-  
+    this.isLogged()
+  }
+
+  isLogged(){
+    if (this.authService.isAuthenticated()) {
+        this.logged = true
+    }
   }
 
 

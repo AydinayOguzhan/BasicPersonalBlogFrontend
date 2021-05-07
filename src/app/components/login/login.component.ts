@@ -35,11 +35,7 @@ export class LoginComponent implements OnInit {
         this.localStorageService.setVariable("token",response.data.token)
         this.localStorageService.setVariable("email",user.email)
         this.getUserByEmail(user.email)
-        this.router.navigate(["cars"])
-        // window.location.replace("/cars")
-        this.toastr.info(response.message).onShown.subscribe(()=>{
-          window.location.reload()
-        })
+        
       },errorResponse=>{
         this.toastr.error(errorResponse.error.message)
       })
@@ -49,9 +45,15 @@ export class LoginComponent implements OnInit {
   }
 
   getUserByEmail(email: string) {
+    console.log("getuserbyemail çalıştı");
+    
     this.userService.getByEmail(email).subscribe(response => {
       this.localStorageService.setVariable("id", response.data.id.toString())
       console.log(response.data.id)
+      this.router.navigate(["/"])
+        this.toastr.info(response.message).onShown.subscribe(()=>{
+          window.location.reload()
+        })
     },errorResponse=>{
       console.log(errorResponse.error.Message)
     })

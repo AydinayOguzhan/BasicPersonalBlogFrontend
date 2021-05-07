@@ -8,7 +8,7 @@ import { ListResponseModel } from 'src/app/models/listResponseModel';
   providedIn: 'root'
 })
 export class OperationClaimService {
-  apiUrl = "https://localhost:44302/api/"
+  apiUrl = "https://localhost:44335/api/"
 
   constructor(private httpClient:HttpClient) { }
 

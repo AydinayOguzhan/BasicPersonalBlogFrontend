@@ -10,7 +10,7 @@ import { User } from 'src/app/models/user/userModel';
   providedIn: 'root'
 })
 export class UserService {
-  apiUrl = "https://localhost:44302/api/"
+  apiUrl = "https://localhost:44335/api/"
 
   constructor(private httpClient:HttpClient) { }
 
@@ -20,7 +20,7 @@ export class UserService {
   }
 
   getByEmail(email:string):Observable<SingleResponseModel<User>>{
-    let newPath = this.apiUrl + "users/getbyemail?email=" + email
+    let newPath = this.apiUrl + "users/getuserbyemail?email=" + email
     return this.httpClient.get<SingleResponseModel<User>>(newPath)
   }
 
