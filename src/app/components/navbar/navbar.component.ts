@@ -22,5 +22,8 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  logout(){
+    this.authService.logout()
+  }
 
 }

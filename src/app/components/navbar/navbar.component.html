@@ -32,13 +32,13 @@
               <li><a class="dropdown-item" routerLink="user/{{user?.id}}">Change user informations</a></li>
               <li><a class="dropdown-item" routerLink="customer/update/{{user?.id}}">Change customer informations</a></li>
             </ul>
-          </li>
+          </li>-->
           
           <li *ngIf="logged === true" class="nav-item">
             <a (click)="logout()" href="" class="nav-link text-primary">Logout</a>
           </li>
   
-          <li *ngIf="ifAdmin === true" class="nav-item dropdown mx-end">
+          <!--<li *ngIf="ifAdmin === true" class="nav-item dropdown mx-end">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Admin
