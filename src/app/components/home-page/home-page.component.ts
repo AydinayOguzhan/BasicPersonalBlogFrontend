@@ -1,5 +1,6 @@
 import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { PostModel } from 'src/app/models/post/postModel';
 import { HomePagePostDateService } from 'src/app/services/homePagePostDateService/home-page-post-date.service';
@@ -13,7 +14,8 @@ import { PostService } from 'src/app/services/postService/post.service';
 export class HomePageComponent implements OnInit {
   posts:PostModel[]
 
-  constructor(private postService:PostService, private toastr:ToastrService, private homePagePostDate:HomePagePostDateService) { }
+  constructor(private postService:PostService, private toastr:ToastrService, private homePagePostDate:HomePagePostDateService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.getPostDate()
@@ -24,7 +26,7 @@ export class HomePageComponent implements OnInit {
     date.setDate(date.getDate() - postDate) 
     let jsonDate = date.toJSON()
 
-    this.postService.GetAllNDaysBefore(jsonDate).subscribe(response=>{
+    this.postService.getAllNDaysBefore(jsonDate).subscribe(response=>{
       this.posts = response.data
 
     },errorResponse=>{
@@ -45,6 +47,7 @@ export class HomePageComponent implements OnInit {
 
   seeThePost(post:PostModel){
     console.log(post);
+    this.router.navigate(["postdetails/" + post.id])
   }
 
 }

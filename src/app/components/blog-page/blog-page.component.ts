@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { PostModel } from 'src/app/models/post/postModel';
 import { PostService } from 'src/app/services/postService/post.service';
@@ -11,7 +12,7 @@ import { PostService } from 'src/app/services/postService/post.service';
 export class BlogPageComponent implements OnInit {
   posts:PostModel[]
 
-  constructor(private postService:PostService, private toastr:ToastrService) { }
+  constructor(private postService:PostService, private toastr:ToastrService, private router:Router) { }
 
   ngOnInit(): void {
     this.getAllPosts()
@@ -26,9 +27,10 @@ export class BlogPageComponent implements OnInit {
     })
   }
 
-
   seeThePost(post:PostModel){
     console.log(post);
+    this.router.navigate(["postdetails/" + post.id])
   }
+
 
 }

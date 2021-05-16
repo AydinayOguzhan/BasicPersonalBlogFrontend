@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserUpdateComponent } from './components/user-update/user-update.component';
 import { AdminPostsComponent } from './components/admin-posts/admin-posts.component';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AdminPostsComponent } from './components/admin-posts/admin-posts.compon
     LoginComponent,
     RegisterComponent,
     UserUpdateComponent,
-    AdminPostsComponent
+    AdminPostsComponent,
+    PostDetailsComponent
   ],
   imports: [
     BrowserModule,
