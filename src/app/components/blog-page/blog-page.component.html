@@ -1,1 +1,15 @@
-<p>blog-page works!</p>
+<br>
+<div class="row">
+  <div class="col-sm-6" *ngFor="let post of posts">
+    <div class="card mt-3">
+      <div class="card-header">
+        {{post.postDate | date}}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{post.postHeader}}</h5>
+        <p class="card-text">{{post.postSummary}}</p>
+        <a href="#" class="btn btn-primary" (click)="seeThePost(post)">See all</a>
+      </div>
+    </div>
+  </div>  
+</div>
