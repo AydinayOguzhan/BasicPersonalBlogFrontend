@@ -14,6 +14,7 @@ import { BlogPageComponent } from './components/blog-page/blog-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserUpdateComponent } from './components/user-update/user-update.component';
+import { AdminPostsComponent } from './components/admin-posts/admin-posts.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UserUpdateComponent } from './components/user-update/user-update.compon
     BlogPageComponent,
     LoginComponent,
     RegisterComponent,
-    UserUpdateComponent
+    UserUpdateComponent,
+    AdminPostsComponent
   ],
   imports: [
     BrowserModule,

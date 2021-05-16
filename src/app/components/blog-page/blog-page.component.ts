@@ -21,6 +21,7 @@ export class BlogPageComponent implements OnInit {
     this.postService.getAll().subscribe(response=>{
       this.posts = response.data
     },errorResponse=>{
+      this.toastr.error(errorResponse.error.message)
       console.log(errorResponse.error.message)
     })
   }
