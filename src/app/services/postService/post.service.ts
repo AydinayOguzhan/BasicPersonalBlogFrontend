@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Claim } from 'src/app/models/claim/claimModel';
 import { ListResponseModel } from 'src/app/models/listResponseModel';
 import { PostModel } from 'src/app/models/post/postModel';
+import { ResponseModel } from 'src/app/models/responseModel';
 import { SingleResponseModel } from 'src/app/models/singleResponseModel';
 
 @Injectable({
@@ -39,4 +40,8 @@ export class PostService {
     return this.httpClient.get<SingleResponseModel<PostModel>>(newPath)
   }
 
+  add(post:PostModel):Observable<ResponseModel>{
+    let newPath = this.apiUrl + "posts/add"
+    return this.httpClient.post<ResponseModel>(newPath,post)
+  }
 }

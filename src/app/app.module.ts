@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
 import {ToastrModule} from 'ngx-toastr';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
@@ -16,6 +17,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { UserUpdateComponent } from './components/user-update/user-update.component';
 import { AdminPostsComponent } from './components/admin-posts/admin-posts.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
+import { AdminPostAddComponent } from './components/admin-post-add/admin-post-add.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { PostDetailsComponent } from './components/post-details/post-details.com
     RegisterComponent,
     UserUpdateComponent,
     AdminPostsComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    AdminPostAddComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import { PostDetailsComponent } from './components/post-details/post-details.com
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
     })

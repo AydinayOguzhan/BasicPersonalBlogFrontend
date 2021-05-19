@@ -1,0 +1,64 @@
+<br> <br> <br>
+<div class="content">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Add Post</h5>
+                </div>
+                <div class="card-body">
+                    <form  [formGroup]="postAddForm">
+
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <label for="postHeader">Post Header</label>
+                                    <div class="form-group">
+                                        <input type="text" id="postHeader" formControlName="postHeader"
+                                            class="form-control" placeholder="Post Header">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <label for="postSummary">Post Summary</label>
+                                    <div class="form-group">
+                                        <input type="text" id="postSummary" formControlName="postSummary"
+                                            class="form-control" placeholder="Post Summary">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <label for="postBody">Post Body</label>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="postBody" id="postBody" formControlName="postBody" 
+                                        cols="30" rows="10"></textarea>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </form>
+
+                    <div class="card-footer">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success" (click)="add()">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
