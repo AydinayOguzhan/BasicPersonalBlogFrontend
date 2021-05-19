@@ -19,7 +19,6 @@ export class AdminPostsComponent implements OnInit {
   getPosts(){
     this.postService.getAll().subscribe(response=>{
       this.posts = response.data
-      console.log(this.posts)
     },errorResponse=>{
       console.log(errorResponse.error.message)
     })
@@ -27,5 +26,9 @@ export class AdminPostsComponent implements OnInit {
 
   goToPostDetails(post:PostModel){
     console.log(post)
+  }
+
+  addPost(){
+    console.log("Worked")
   }
 }

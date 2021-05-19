@@ -19,8 +19,18 @@ export class PostService {
     return this.httpClient.get<ListResponseModel<PostModel>>(newPath)
   }
 
+  getAllDesc():Observable<ListResponseModel<PostModel>>{
+    let newPath = this.apiUrl + "posts/getalldesc"
+    return this.httpClient.get<ListResponseModel<PostModel>>(newPath)
+  }
+
   getAllNDaysBefore(date:any):Observable<ListResponseModel<PostModel>>{
     let newPath = this.apiUrl + "posts/getallndaysbefore?date=" + date
+    return this.httpClient.get<ListResponseModel<PostModel>>(newPath)
+  }
+
+  getAllNDaysBeforeDesc(date:any):Observable<ListResponseModel<PostModel>>{
+    let newPath = this.apiUrl + "posts/getallndaysbeforedesc?date=" + date
     return this.httpClient.get<ListResponseModel<PostModel>>(newPath)
   }
 

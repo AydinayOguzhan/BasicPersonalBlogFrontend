@@ -21,12 +21,12 @@ export class HomePageComponent implements OnInit {
     this.getPostDate()
   }
 
-  getAllPosts(postDate:number){
+  getAllPostsDesc(postDate:number){
     let date = new Date()
     date.setDate(date.getDate() - postDate) 
     let jsonDate = date.toJSON()
 
-    this.postService.getAllNDaysBefore(jsonDate).subscribe(response=>{
+    this.postService.getAllNDaysBeforeDesc(jsonDate).subscribe(response=>{
       this.posts = response.data
 
     },errorResponse=>{
@@ -37,7 +37,7 @@ export class HomePageComponent implements OnInit {
 
   getPostDate(){
     this.homePagePostDate.get().subscribe(response=>{
-      this.getAllPosts(response.data.postDate)
+      this.getAllPostsDesc(response.data.postDate)
 
     },errorResponse=>{
       console.log(errorResponse.error.Message)

@@ -15,11 +15,11 @@ export class BlogPageComponent implements OnInit {
   constructor(private postService:PostService, private toastr:ToastrService, private router:Router) { }
 
   ngOnInit(): void {
-    this.getAllPosts()
+    this.getAllPostsDesc()
   }
 
-  getAllPosts(){
-    this.postService.getAll().subscribe(response=>{
+  getAllPostsDesc(){
+    this.postService.getAllDesc().subscribe(response=>{
       this.posts = response.data
     },errorResponse=>{
       this.toastr.error(errorResponse.error.message)
