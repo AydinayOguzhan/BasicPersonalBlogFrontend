@@ -14,11 +14,11 @@ export class AdminPostsComponent implements OnInit {
   constructor(private postService:PostService, private router:Router) { }
 
   ngOnInit(): void {
-    this.getPosts()
+    this.getPostsDesc()
   }
 
-  getPosts(){
-    this.postService.getAll().subscribe(response=>{
+  getPostsDesc(){
+    this.postService.getAllDesc().subscribe(response=>{
       this.posts = response.data
     },errorResponse=>{
       console.log(errorResponse.error.message)
