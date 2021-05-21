@@ -19,6 +19,7 @@ import { AdminPostsComponent } from './components/admin-posts/admin-posts.compon
 import { PostDetailsComponent } from './components/post-details/post-details.component';
 import { AdminPostAddComponent } from './components/admin-post-add/admin-post-add.component';
 import { AdminPostUpdateComponent } from './components/admin-post-update/admin-post-update.component';
+import { AdminUsersComponent } from './components/admin-users/admin-users.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AdminPostUpdateComponent } from './components/admin-post-update/admin-p
     AdminPostsComponent,
     PostDetailsComponent,
     AdminPostAddComponent,
-    AdminPostUpdateComponent
+    AdminPostUpdateComponent,
+    AdminUsersComponent
   ],
   imports: [
     BrowserModule,
