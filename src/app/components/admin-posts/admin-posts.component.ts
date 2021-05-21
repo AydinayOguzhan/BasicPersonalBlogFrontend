@@ -26,7 +26,7 @@ export class AdminPostsComponent implements OnInit {
   }
 
   goToPostDetails(post:PostModel){
-    console.log(post)
+    this.router.navigate(["admin/post/update/" + post.id])
   }
 
   addPost(){

@@ -1,0 +1,111 @@
+<br>
+<div class="content">
+    <div class="row">
+        <!-- <div class="col-md-2"></div> -->
+        <div class="col-md-12">
+            <div class="card border-primary">
+                <div class="card-header border-primary">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h5 class="title text-primary">Update Post</h5>
+                        </div>
+                        <div class="col-md-8"></div>
+                        <div class="col-md-2">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Delete Post
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <form [formGroup]="postUpdateForm">
+
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <label class="" for="postDate">Post Date</label>
+                                    <div class="form-group">
+                                        <label class="form-control border-secondary" for="postDate">{{currentPostDate |
+                                            date}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <label for="postHeader">Post Header</label>
+                                    <div class="form-group">
+                                        <input type="text" id="postHeader" formControlName="postHeader"
+                                            class="form-control" placeholder="Post Header">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <label for="postSummary">Post Summary</label>
+                                    <div class="form-group">
+                                        <input type="text" id="postSummary" formControlName="postSummary"
+                                            class="form-control" placeholder="Post Summary">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <label for="postBody">Post Body</label>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="postBody" id="postBody"
+                                            formControlName="postBody" cols="30" rows="15"></textarea>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <div class="card-footer">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success" (click)="update()">Update</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content border-danger">
+            <div class="modal-header border-danger">
+                <h5 class="modal-title text-danger" id="exampleModalLabel">Delete Post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Delete this post permanently
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

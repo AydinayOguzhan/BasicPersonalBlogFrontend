@@ -44,4 +44,14 @@ export class PostService {
     let newPath = this.apiUrl + "posts/add"
     return this.httpClient.post<ResponseModel>(newPath,post)
   }
+
+  update(post:PostModel):Observable<ResponseModel>{
+    let newPath = this.apiUrl + "posts/update"
+    return this.httpClient.post<ResponseModel>(newPath,post)
+  }
+
+  delete(post:PostModel):Observable<ResponseModel>{
+    let newPath = this.apiUrl + "posts/delete"
+    return this.httpClient.post<ResponseModel>(newPath,post)
+  }
 }

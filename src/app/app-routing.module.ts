@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminPostAddComponent } from './components/admin-post-add/admin-post-add.component';
+import { AdminPostUpdateComponent } from './components/admin-post-update/admin-post-update.component';
 import { AdminPostsComponent } from './components/admin-posts/admin-posts.component';
 import { BlogPageComponent } from './components/blog-page/blog-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
 
   {path:"admin/posts", component:AdminPostsComponent,canActivate:[LoginGuard]},
   {path:"admin/post/add", component:AdminPostAddComponent,canActivate:[LoginGuard]},
+  {path:"admin/post/update/:postId", component:AdminPostUpdateComponent,canActivate:[LoginGuard]},
   {path:"admin/users", component:AdminPostsComponent,canActivate:[LoginGuard]},
 ];
 

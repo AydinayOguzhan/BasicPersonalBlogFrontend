@@ -18,6 +18,7 @@ import { UserUpdateComponent } from './components/user-update/user-update.compon
 import { AdminPostsComponent } from './components/admin-posts/admin-posts.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
 import { AdminPostAddComponent } from './components/admin-post-add/admin-post-add.component';
+import { AdminPostUpdateComponent } from './components/admin-post-update/admin-post-update.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AdminPostAddComponent } from './components/admin-post-add/admin-post-ad
     UserUpdateComponent,
     AdminPostsComponent,
     PostDetailsComponent,
-    AdminPostAddComponent
+    AdminPostAddComponent,
+    AdminPostUpdateComponent
   ],
   imports: [
     BrowserModule,
